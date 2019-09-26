@@ -1,6 +1,26 @@
+// * { background-color: rgba(255,0,0,.2); }
+// * * { background-color: rgba(0,255,0,.2); }
+// * * * { background-color: rgba(0,0,255,.2); }
+// * * * * { background-color: rgba(255,0,255,.2); }
+// * * * * * { background-color: rgba(0,255,255,.2); }
+// * * * * * * { background-color: rgba(255,255,0,.2); }
+// * * * * * * * { background-color: rgba(255,0,0,.2); }
+// * * * * * * * * { background-color: rgba(0,255,0,.2); }
+// * * * * * * * * * { background-color: rgba(0,0,255,.2); }
+
+// FONTS
+@import url("https://use.typekit.net/vqz8nzp.css");
+
 // GLOBAL STYLINGS
-@import "./sass/globalReset";
-@import "./sass/variables";
+@import "./scss/global/globalReset";
+@import "./scss/global/variables";
+@import "./scss/global/layout";
+
+// COMPONENTS
+@import "./scss/componentStyles/logos";
+@import "./scss/componentStyles/navbar";
+@import "./scss/componentStyles/hero";
+@import "./scss/componentStyles/stat";
 
 // PAGES
-@import "./sass/pageStyles/home"
+@import "./scss/pageStyles/home"
