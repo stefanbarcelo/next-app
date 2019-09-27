@@ -32,7 +32,7 @@ body {
 	line-height: 1;
 	font-family: 'p22 underground', sans-serif;
 	font-weight: 300;
-	background: rgb(144, 109, 68);
+	background: rgba(21, 30, 46, 1);
 	width: 100%;
 }
 ol, ul {
@@ -59,17 +59,26 @@ a {
 h1 {
 	font-family: 'PoynterOSDisp', serif;
 	font-size: 52px;
+	line-height: 63px;
 	color: white;
 
 	.highlight {
-		background: #CC9F48;
+		color: $black;
+		background: rgb(255, 208, 113);
 		padding: 0 5px;
 	}
+}
+
+h2 {
+	font-family: 'PoynterOSDisp', serif;
+	font-size: 36px;
+	line-height: 47px;
+	color: white;
 }
 
 p {
 	color: white;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 26px;
 	font-weight: 100;
 }

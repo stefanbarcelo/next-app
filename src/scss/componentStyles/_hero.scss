@@ -1,18 +1,17 @@
 .defaultHero {
   display: block;
   position: relative;
-  background: url('../../images/headerBg@3x.png') no-repeat center center;
+  background: url('../../images/headerBg.png') no-repeat center center;
   background-size: cover;
-  width: 100%;
-  height: 100vh;
+  height: auto;
   z-index: -2;
 }
 
 .defaultHero::after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%; 
+  width: inherit;
+  height: inherit; 
   top: 0;
   left: 0;
   right: 0;

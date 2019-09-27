@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero"
 import Stat from "../components/Stat"
+import LocationsList from "../components/LocationsList"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
             quam, ut vehicula lectus scelerisque efficitur.</p>
         </div>
       </Hero>
+      <LocationsList/>
     </>
   );
 }

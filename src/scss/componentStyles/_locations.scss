@@ -1,0 +1,89 @@
+.locationsContainer {
+  position: relative;
+  transition: all .25s ease;
+
+  &:hover{
+    transform: scale(1.02);
+  }
+}
+
+.locationsCenter {
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-left: 24px;
+  background: rgba(21, 30, 46, 1);
+  padding: 5vh 25px;
+}
+
+.location {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background: url("../../images/taipei.jpg") center center no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 350px;
+  margin-right: 24px;
+  transform: scale(1);
+  transition: all 0.25s ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include gradientOverlay;
+    opacity: .8;
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.locationInfo {
+  position: relative;
+  margin: 20px 30px 25px;
+  height: 160px;
+
+  p {
+    position: relative;
+    font-weight: 600;
+
+    .flagEmoji {
+      position: absolute;
+      margin-top: 16px;
+      margin-left: 8px;
+      font-size: 20px;
+      line-height: 0;
+    }
+  }
+
+  .avgPrice, .weather {
+    position: absolute;
+    font-size: 14px;
+    bottom: 0;
+  }
+
+  .weather {
+    text-align: center;
+    right: 0;
+
+    .weatherEmoji {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+

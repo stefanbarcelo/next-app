@@ -12,8 +12,8 @@
 @import url("https://use.typekit.net/vqz8nzp.css");
 
 // GLOBAL STYLINGS
-@import "./scss/global/globalReset";
 @import "./scss/global/variables";
+@import "./scss/global/globalReset";
 @import "./scss/global/layout";
 
 // COMPONENTS
@@ -21,6 +21,7 @@
 @import "./scss/componentStyles/navbar";
 @import "./scss/componentStyles/hero";
 @import "./scss/componentStyles/stat";
+@import "./scss/componentStyles/locations";
 
 // PAGES
 @import "./scss/pageStyles/home"
