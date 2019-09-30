@@ -11,7 +11,7 @@ class LocationProvider extends Component {
     cities: [
       {
         id: 1,
-        city: "Hello From Application State",
+        city: "taipei",
         slug: "taipei",
         country: "taiwan",
         flag: '🇹🇼',

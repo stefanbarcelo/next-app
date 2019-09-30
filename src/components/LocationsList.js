@@ -6,7 +6,7 @@ export default class FeaturedRooms extends Component {
   static contextType = LocationContext;
 
   render() {
-    let cities = this.context;
+    let cities = this.context.state.cities;
     console.log(cities)
     cities = cities.map(city => {
       return <Location key={city.id} location={city} />
