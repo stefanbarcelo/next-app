@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { LocationProvider } from './Context'
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <LocationProvider>
+    <Router>
+      <App />
+    </Router>
+  </LocationProvider>,
   document.getElementById('root')
 );
 

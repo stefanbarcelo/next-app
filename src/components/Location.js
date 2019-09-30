@@ -1,20 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Location({ room }) {
+import PropTypes from 'prop-types';
 
+export default function Location({ location }) {
+  const { city, slug, country, flag, price, degrees, symbol } = location;
   return (
-    <Link to="/">
+    <Link to={`/rooms/${slug}`}>
       <div className="location">
         <div className="locationInfo">
-          <h2>Taipei</h2>
-          <p>Taiwan <span className="flagEmoji">🇹🇼</span></p>
-          <p className="avgPrice">From $1,899 per month</p>
+          <h2>{city}</h2>
+          <p>{country} <span className="flagEmoji">{flag}</span></p>
+          <p className="avgPrice">From ${price} per month</p>
           <div className="weather">
-            <div className="weatherEmoji">☀️</div>
-            <p>18˚C/60˚F</p>
+            <div className="weatherEmoji">{symbol}</div>
+            <p>{degrees}</p>
           </div>
         </div>
       </div>
     </Link>
   )
 }
+

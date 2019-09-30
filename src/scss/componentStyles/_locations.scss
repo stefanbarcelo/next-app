@@ -1,10 +1,5 @@
 .locationsContainer {
   position: relative;
-  transition: all .25s ease;
-
-  &:hover{
-    transform: scale(1.02);
-  }
 }
 
 .locationsCenter {
@@ -29,6 +24,7 @@
   margin-right: 24px;
   transform: scale(1);
   transition: all 0.25s ease-in-out;
+  @include dropShadow;
 
   &:after {
     content: "";
@@ -40,12 +36,14 @@
     right: 0;
     bottom: 0;
     z-index: -1;
+    border-radius: inherit;
     @include gradientOverlay;
-    opacity: .8;
+    box-shadow: none;
   }
 
   &:hover {
-    opacity: .5;
+    transform: scale(1.05);
+    opacity: 0.5;
   }
 }
 
@@ -67,7 +65,8 @@
     }
   }
 
-  .avgPrice, .weather {
+  .avgPrice,
+  .weather {
     position: absolute;
     font-size: 14px;
     bottom: 0;
@@ -86,4 +85,3 @@
     }
   }
 }
-
