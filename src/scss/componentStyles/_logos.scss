@@ -1,7 +1,11 @@
-.logo {
-  width: 86px;
-  display: block;
+.logo, .miniLogo {
+  width: 90px;
+  display: inline-block;
   font-family: 'PoynterOSDisp', serif;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 400;
+}
+
+.miniLogo {
+  font-size: 24px;
 }

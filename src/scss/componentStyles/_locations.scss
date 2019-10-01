@@ -19,31 +19,32 @@
   border-radius: 15px;
   background: url("../../images/taipei.jpg") center center no-repeat;
   background-size: cover;
+  text-transform: capitalize;
   height: 200px;
   width: 350px;
   margin-right: 24px;
   transform: scale(1);
   transition: all 0.25s ease-in-out;
+  overflow: hidden;
+  @include gradientOverlay;
   @include dropShadow;
 
-  &:after {
-    content: "";
+  img {
+    opacity: .5;
+    box-sizing: border-box;
     position: absolute;
-    width: inherit;
-    height: inherit;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border-radius: inherit;
-    @include gradientOverlay;
-    box-shadow: none;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: all .25s ease-in-out;
   }
 
   &:hover {
     transform: scale(1.05);
-    opacity: 0.5;
+
+    img {
+      opacity: .1;
+    }
   }
 }
 
