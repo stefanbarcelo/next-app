@@ -1,0 +1,51 @@
+.cityHero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  height: 80vh;
+  background: white;
+
+  .cityImage {
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .cityInfoCon {
+    color: $black;
+    height: 100%;
+    padding: 40px 50px 0 50px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    .cityInfo {
+      max-width: 554px;
+
+      h3 {
+        color: $black;
+        margin-bottom: 5px;
+      }
+      p {
+        color: $black;
+      }
+
+      .nameAndEmoji {
+        position: relative;
+        font-weight: 800;
+        color: rgb(255, 64, 64);
+        margin-bottom: 5px;
+
+        span {
+          position: absolute;
+          margin-top: 2px;
+          margin-left: 8px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.perkTag {
+  display: inline-block;
+  background: none;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.07);
+  margin: 6px 0;
+
+  .perkTagContent {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-items: center;
+
+    .checkMark {
+      box-sizing: border-box;
+      padding: 8px;
+      display: inline-block;
+      background: #e8e8e8;
+    }
+
+    .perkTagText {
+      color: #16B722;
+      margin: none !important;
+      box-sizing: border-box;
+      padding: 0 15px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+  }
+}

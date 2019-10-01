@@ -2,14 +2,16 @@ import React from 'react';
 import Home from "./pages/Home";
 import './App.scss';
 import { Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
+import City from "./pages/City";
 
 function App() {
   return (
     <>
-    <Navbar/>
+    <Nav/>
     <Switch>
       <Route exact path="/" component={Home}></Route>
+      <Route exact path="/cities/:slug" component={City}></Route>
     </Switch>
     </>
   );

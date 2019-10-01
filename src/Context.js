@@ -59,8 +59,8 @@ class LocationProvider extends Component {
       },
       {
         id: 5,
-        city: "rio de janeiro",
-        slug: "rio-de-janeiro",
+        city: "rio",
+        slug: "rio",
         country: "brazil",
         flag: "🇧🇷",
         price: 800,

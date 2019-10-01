@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function Location({ location }) {
   const { city, slug, country, flag, price, degrees, symbol, image } = location;
   return (
-    <Link to={`/rooms/${slug}`}>
+    <Link to={`/cities/${slug}`}>
       <div className="location">
         <img src={image} alt="" />
         <div className="locationInfo">
