@@ -1,0 +1,35 @@
+.cityAvg {
+  display: inline-block;
+  margin-right: 25px;
+
+  .metricInside {
+    display: grid;
+    grid-template-columns: 36px auto;
+    align-items: center;
+
+    .metricEmoji {
+      display: inline-block;
+      align-items: center;
+      justify-items: center;
+      font-size: 24px;
+    }
+
+    .metric {
+      display: inline-block;
+
+      .metricValue {
+        font-size: 13px;
+        line-height: 13px;
+        font-weight: 600;
+        color: $black;
+      }
+
+      .metricName {
+        color: $gray;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,33 +1,39 @@
-import React from "react";
-import barcelonaHero from "../images/barcelonaHero@2x.png";
+import React, { Component } from 'react'
+import barcelonaHero from "../images/barcelonaHero.png";
 import PerkTag from "../components/PerkTag";
+import CityAvg from "../components/CityAvg";
+import { LocationContext } from '../Context'
 
-export default function CityHero() {
-  return (
-    <div className="cityHero">
-      <div className="cityImage">
-        <img src={barcelonaHero} alt="" />
-      </div>
-      <div className="cityInfoCon">
-        <div className="cityInfo">
-          <h3>Live in a Mediterranean Styled Apartment.</h3>
-          <p className="nameAndEmoji">
-            Barcelona, Spain <span>🇪🇸</span>
+export default class CityHero extends Component {
+  static contextType = LocationContext;
+  render() {
+    return (
+      <div className="cityHero">
+        <div className="cityImage">
+          <img src={barcelonaHero} alt="" />
+        </div>
+        <div className="cityInfoCon">
+          <div className="cityInfo">
+            <h3>Live in a Mediterranean Styled Apartment.</h3>
+            <p className="nameAndEmoji">
+              Barcelona, Spain <span role="img" aria-label="flag">🇪🇸</span>
+            </p>
+            <div>
+              <PerkTag perk="Warm Climate" />
+              <PerkTag perk="Fully Furnished" />
+              <PerkTag perk="No Long Leases" />
+            </div>
+            <p className="cityDescription">
+              Barcelona, the unbelievable city at the Balearic Sea, highly
+              favored, and a place most digital nomad or world traveler would like
+              to visit for an extended period of time. While serviced apartments
+              are still a relatively uncommon sight in the City, numerous are in
+              the planning along with co-working spaces and 24-hour coffee shops.
           </p>
-          <div>
-            <PerkTag perk="Warm Climate" />
-            <PerkTag perk="Fully Furnished" />
-            <PerkTag perk="No Long Leases" />
+            <CityAvg emoji="☀️" degrees="24˚C/74˚F" wifi="37/17" price="2649" />
           </div>
-          <p>
-            Barcelona, the unbelievable city at the Balearic Sea, highly
-            favored, and a place most digital nomad or world traveler would like
-            to visit for an extended period of time. While serviced apartments
-            are still a relatively uncommon sight in the City, numerous are in
-            the planning along with co-working spaces and 24-hour coffee shops.
-          </p>
         </div>
       </div>
-    </div>
-  );
+    )
+  }
 }

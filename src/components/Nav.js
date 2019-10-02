@@ -24,7 +24,7 @@ export default class Navbar extends Component {
 
             <div className="logoCon">
               <Link to="/" className="logo">
-                Next™
+                Next<span>™</span>
               </Link>
             </div>
 
@@ -38,12 +38,11 @@ export default class Navbar extends Component {
           <div className="closeContainer" onClick={this.handleToggle}>
             <div className="close"></div>
           </div>
-          <div className="mobList">
-            <Link className="mobLinks" to="/">Cities</Link>
-            <Link className="mobLinks" to="/">Your Bookings</Link>
-            <Link className="mobLinks" to="/">Contact Us</Link>
-            <Link className="mobLinks" to="/">Privacy Policy</Link>
-          </div>
+          <ul className="mobList">
+            <li><Link className="mobLinks" to="/">Home</Link></li>
+            <li><Link className="mobLinks" to="/">Cities</Link></li>
+            <li><Link className="mobLinks" to="/">Contact Us</Link></li>
+          </ul>
         </div>
       </div>
     );

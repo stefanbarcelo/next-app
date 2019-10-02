@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
-
 export default function Location({ location }) {
   const { city, slug, country, flag, price, degrees, symbol, image } = location;
   return (
@@ -24,3 +23,14 @@ export default function Location({ location }) {
   );
 }
 
+Location.propTypes = {
+  location: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+     slug: PropTypes.string.isRequired,
+     country: PropTypes.string.isRequired,
+     flag: PropTypes.string.isRequired,
+     price: PropTypes.number.isRequired,
+     degrees: PropTypes.string.isRequired,
+     symbol: PropTypes.string.isRequired
+  })
+}

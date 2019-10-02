@@ -4,18 +4,25 @@
   min-height: 500px;
   height: 100vh;
   background: white;
+  @include dropShadow;
 
   .cityImage {
     overflow: hidden;
+    
     img {
       object-fit: cover;
       height: 100%;
       width: 100%;
+      transition: all 2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1)
+      }
     }
   }
 
   .cityInfoCon {
-    min-width: 470px;
+    min-width: 480px;
     color: $black;
     height: 100%;
     padding: 40px 50px 0 50px;
@@ -30,9 +37,6 @@
         color: $black;
         margin-bottom: 5px;
       }
-      p {
-        color: gray;
-      }
 
       .nameAndEmoji {
         position: relative;
@@ -46,6 +50,12 @@
           margin-left: 8px;
           font-size: 20px;
         }
+      }
+
+      .cityDescription {
+        color: $gray;
+        margin-top: 5px;
+        margin-bottom: 20px;
       }
     }
   }
