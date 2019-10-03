@@ -16,7 +16,7 @@
       transition: all 2s ease-in-out;
 
       &:hover {
-        transform: scale(1.1)
+        transform: scale(1.05)
       }
     }
   }
@@ -33,9 +33,14 @@
     .cityInfo {
       max-width: 554px;
 
-      h3 {
+      h1 {
         color: $black;
         margin-bottom: 5px;
+
+        span {
+          text-transform: capitalize;
+          font-weight: 800;
+        }
       }
 
       .nameAndEmoji {
@@ -43,6 +48,7 @@
         font-weight: 800;
         color: rgb(255, 64, 64);
         margin-bottom: 5px;
+        text-transform: capitalize;
 
         span {
           position: absolute;

@@ -49,11 +49,20 @@
       transform: translateX(-10%);
       transition: all 0.7s ease-in-out;
 
-      .mobLinks {
+      .mobLink {
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 30px;
-        @include underlineLinks
+        @include underlineLinks;
+      }
+
+      .activeLink {
+        color: $red;
+        transition: all 0.25s ease-in-out;
+
+        &:before {
+          opacity: .3;
+        }
       }
     }
   }
@@ -67,6 +76,7 @@
     }
   }
 }
+
 
 // BURGER && CLOSE BTNS
 .burgerCon {

@@ -1,49 +1,48 @@
 import React, { Component } from 'react'
-import barcelonaHero from "../images/barcelonaHero.png";
 import PerkTag from "../components/PerkTag";
 import CityAvg from "../components/CityAvg";
+import CityHero from "../components/CityHero";
+import { Link } from 'react-router-dom'
 import { LocationContext } from '../Context'
 
 
 export default class City extends Component {
   constructor(props) {
-		super(props);
-		this.state = {
-			slug: this.props.match.params.slug,
-		}
+    super(props);
+    this.state = {
+      slug: this.props.match.params.slug,
+    }
   }
   static contextType = LocationContext;
   render() {
     const { getCity } = this.context;
-    const city = getCity(this.state.slug);
-    console.log(city);
+    const selectedCity = getCity(this.state.slug);
+    console.log(selectedCity);
+    if (!selectedCity) {
+      return (
+        <div className="error">
+          <h1>No such room was found</h1>
+          <Link to='/' className="btn-primary">Back to home</Link>
+        </div>
+      )
+    }
+    const { city, country, flag, description, price, degrees, symbol, hero, perks } = selectedCity;
+    
     return (
       <>
-        <div className="cityHero">
-          <div className="cityImage">
-            <img src={barcelonaHero} alt="" />
-          </div>
-          <div className="cityInfoCon">
-            <div className="cityInfo">
-              <h3>Live in a Mediterranean Styled Apartment.</h3>
-              <p className="nameAndEmoji">
-                Barcelona, Spain <span role="img" aria-label="flag">🇪🇸</span>
-              </p>
-              <div>
-                <PerkTag perk="Warm Climate" />
-                <PerkTag perk="Fully Furnished" />
-                <PerkTag perk="No Long Leases" />
-              </div>
-              <p className="cityDescription">
-                Barcelona, the unbelievable city at the Balearic Sea, highly
-                favored, and a place most digital nomad or world traveler would like
-                to visit for an extended period of time. While serviced apartments
-                are still a relatively uncommon sight in the City, numerous are in
-                the planning along with co-working spaces and 24-hour coffee shops.
-          </p>
-              <CityAvg emoji="☀️" degrees="24˚C/74˚F" wifi="37/17" price="2649" />
-            </div>
-          </div>
+        <CityHero
+        city={city}
+        country={country}
+        flag={flag}
+        description={description}
+        price={price}
+        degrees={degrees}
+        symbol={symbol}
+        hero={hero}
+        />
+        <div className="divider">
+          <div className="line"></div>
+          <h1>Available Stays</h1>
         </div>
       </>
     )

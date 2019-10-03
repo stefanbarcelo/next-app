@@ -2,7 +2,7 @@
 $smoke: #f5f6f7;
 $black: #080808;
 $gray: rgb(166, 166, 166);
-$tan: rgb(255, 210, 121);
+$red: rgb(255, 99, 99);
 
 @mixin gradientOverlay {
   background: rgba(21, 30, 46, 0.45);
@@ -38,7 +38,7 @@ $tan: rgb(255, 210, 121);
 
   &:before {
     content: "";
-    background: $tan;
+    background: $red;
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -47,11 +47,29 @@ $tan: rgb(255, 210, 121);
     transition: all 0.25s ease-in-out;
   }
 
+  .arrow {
+    position: absolute;
+    margin-left: 5px;
+    transform: rotate(-180deg);
+    transition: all .25s ease-in-out;
+  }
+
   &:hover {
-    color: $tan;
+    color: $red;
 
     &:before {
       opacity: 0.3;
+    }
+
+    .arrow {
+      transition: all .25s ease-in-out;
+      transform: rotate(0deg);
+      svg{
+        path {
+          transition: all .25s ease-in-out;
+          stroke: $red;
+        }
+      }
     }
   }
 }
