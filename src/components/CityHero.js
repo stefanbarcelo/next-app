@@ -2,7 +2,7 @@ import React from 'react'
 import PerkTag from "../components/PerkTag";
 import CityAvg from "../components/CityAvg";
 
-export default function CityHero({ hero, city, country, flag, description, symbol, degrees, price }) {
+export default function CityHero({ hero, city, country, flag, description, symbol, degrees, price, perks }) {
   return (
     <div className="cityHero">
       <div className="cityImage">
@@ -10,7 +10,7 @@ export default function CityHero({ hero, city, country, flag, description, symbo
       </div>
       <div className="cityInfoCon">
         <div className="cityInfo">
-          <h1>Stays in <span>{city}</span> for monthly rental</h1>
+          <h2>Stays in <span>{city}</span> for monthly rental</h2>
           <p className="nameAndEmoji">
             {city}, {country} <span role="img" aria-label="flag">{flag}</span>
           </p>

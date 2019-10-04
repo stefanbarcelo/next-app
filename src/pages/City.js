@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import PerkTag from "../components/PerkTag";
-import CityAvg from "../components/CityAvg";
+import ComplexList from "../components/ComplexList";
 import CityHero from "../components/CityHero";
+
 import { Link } from 'react-router-dom'
 import { LocationContext } from '../Context'
 
@@ -21,7 +21,7 @@ export default class City extends Component {
     if (!selectedCity) {
       return (
         <div className="error">
-          <h1>No such room was found</h1>
+          <h2>No such room was found</h2>
           <Link to='/' className="btn-primary">Back to home</Link>
         </div>
       )
@@ -42,8 +42,10 @@ export default class City extends Component {
         />
         <div className="divider">
           <div className="line"></div>
-          <h1>Available Stays</h1>
+          <h2>Find the Apartment For You</h2>
+          <p>Over 200 listings to choose from.</p>
         </div>
+        <ComplexList/>
       </>
     )
   }

@@ -19,12 +19,17 @@ export default [
     country: "taiwan",
     flag: "🇹🇼",
     description:
-      "Taiwan remains largely undiscovered and seriously underrated by Western travellers, but those that make it here are in for a real treat. In the 1990s Taiwan became the first true Chinese democracy, developing a sense of civil society bewildering to its giant neighbour across the Taiwan Strait. Since then, popular culture has blossomed on the island, an eclectic mix of Chinese, Western, Japanese and indigenous influences. It has sensational food, traditional Chinese and aboriginal festivals and exuberant temples, yet the biggest surprise is Taiwan’s hinterland: think towering mountains, eight national parks, a selection of alluring offshore islands and numerous hot-spring resorts.",
+      "Taiwan remains largely undiscovered and seriously underrated by Western travellers, but those that make it here are in for a real treat. It has sensational food, traditional Chinese and aboriginal festivals and exuberant temples, yet the biggest surprise is Taiwan’s hinterland: think towering mountains, eight national parks, a selection of alluring offshore islands and numerous hot-spring resorts.",
     price: 1940,
     degrees: "18˚C/60˚F",
     symbol: "🌧️",
     image: taipei,
-    hero: taipeiHero
+    hero: taipeiHero,
+    perks: [
+      "Warm Climate",
+      "Fully Furnished",
+      "No Long Leases"
+    ]
   },
   {
     id: 2,
