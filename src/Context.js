@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import items from "./data"
+import allApartments from "./apartments"
 
 // first we will make a new context
 const LocationContext = React.createContext();
@@ -7,20 +8,23 @@ const LocationContext = React.createContext();
 // create a provider class with the state
 class LocationProvider extends Component {
   state = {
-    cities: []
+    cities: [],
+    apartments: []
   };
   componentDidMount() {
     let cities = this.formatData(items);
+    let apartments = this.formatData(allApartments);
     this.setState({
-      cities
+      cities,
+      apartments
     })
   }
   formatData(items) {
     let tempItems = items.map(item => {
       let id = item.id;
       let images = item.images;
-      let city = { ...item, images, id }
-      return city;
+      let newItems = { ...item, images, id }
+      return newItems;
     })
     return tempItems;
   }
@@ -45,5 +49,15 @@ class LocationProvider extends Component {
   }
 }
 
+const LocationConsumer = LocationContext.Consumer;
+export function withLocationConsumer(Component) {
+  return function ConsumerWrapper(props) {
+    return (
+      <LocationConsumer>
+        {value => <Component {...props} context={value} />}
+      </LocationConsumer>
+    )
+  }
+}
 
-export { LocationProvider, LocationContext };
+export { LocationProvider, LocationContext, LocationConsumer };

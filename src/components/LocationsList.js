@@ -9,7 +9,6 @@ export default class FeaturedRooms extends Component {
     cities = cities.map(city => {
       return <Location key={city.id} location={city} />
     })
-
     return (
       <section className="locationsContainer">
         <div className="locationsCenter">

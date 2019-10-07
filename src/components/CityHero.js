@@ -2,7 +2,8 @@ import React from 'react'
 import PerkTag from "../components/PerkTag";
 import CityAvg from "../components/CityAvg";
 
-export default function CityHero({ hero, city, country, flag, description, symbol, degrees, price, perks }) {
+export default function CityHero({ selectedCity }) {
+  let { city, country, flag, description, price, degrees, symbol, hero, perks } = selectedCity;
   return (
     <div className="cityHero">
       <div className="cityImage">
@@ -15,9 +16,9 @@ export default function CityHero({ hero, city, country, flag, description, symbo
             {city}, {country} <span role="img" aria-label="flag">{flag}</span>
           </p>
           <div>
-            <PerkTag perk="Warm Climate" />
-            <PerkTag perk="Fully Furnished" />
-            <PerkTag perk="No Long Leases" />
+            {perks = perks.map(perk => {
+              return <PerkTag key={perk} perk={perk} />
+            })}
           </div>
           <p className="cityDescription">
             {description}

@@ -43,7 +43,12 @@ export default [
     degrees: "24˚C/74˚F",
     symbol: "☀️",
     image: barcelona,
-    hero: barcelonaHero
+    hero: barcelonaHero,
+    perks: [
+      "Warm Climate",
+      "Fully Furnished",
+      "No Long Leases"
+    ]
   },
   {
     id: 3,
@@ -57,7 +62,12 @@ export default [
     degrees: "24˚C/76˚F",
     symbol: "☀️",
     image: kosamui,
-    hero: kosamuiHero
+    hero: kosamuiHero,
+    perks: [
+      "Warm Climate",
+      "Fully Furnished",
+      "No Long Leases"
+    ]
   },
   {
     id: 4,
@@ -71,7 +81,12 @@ export default [
     degrees: "12˚C/54˚F",
     symbol: "⛅",
     image: prague,
-    hero: pragueHero
+    hero: pragueHero,
+    perks: [
+      "Warm Climate",
+      "Fully Furnished",
+      "No Long Leases"
+    ]
   },
   {
     id: 5,
@@ -85,7 +100,12 @@ export default [
     degrees: "22˚C/71˚F",
     symbol: "⛅",
     image: rio,
-    hero: rioHero
+    hero: rioHero,
+    perks: [
+      "Warm Climate",
+      "Fully Furnished",
+      "No Long Leases"
+    ]
   },
   {
     id: 6,
@@ -99,6 +119,11 @@ export default [
     degrees: "24˚C/75˚F",
     symbol: "☀️",
     image: canggu,
-    hero: cangguHero
+    hero: cangguHero,
+    perks: [
+      "Warm Climate",
+      "Fully Furnished",
+      "No Long Leases"
+    ]
   }
 ]

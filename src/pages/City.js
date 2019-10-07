@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ComplexList from "../components/ComplexList";
+import ApartmentList from "../components/ApartmentList";
 import CityHero from "../components/CityHero";
-
 import { Link } from 'react-router-dom'
 import { LocationContext } from '../Context'
 
@@ -17,7 +16,7 @@ export default class City extends Component {
   render() {
     const { getCity } = this.context;
     const selectedCity = getCity(this.state.slug);
-    console.log(selectedCity);
+    const selectedApartments = this.context.state.apartments;
     if (!selectedCity) {
       return (
         <div className="error">
@@ -26,26 +25,11 @@ export default class City extends Component {
         </div>
       )
     }
-    const { city, country, flag, description, price, degrees, symbol, hero, perks } = selectedCity;
-    
+
     return (
       <>
-        <CityHero
-        city={city}
-        country={country}
-        flag={flag}
-        description={description}
-        price={price}
-        degrees={degrees}
-        symbol={symbol}
-        hero={hero}
-        />
-        <div className="divider">
-          <div className="line"></div>
-          <h2>Find the Apartment For You</h2>
-          <p>Over 200 listings to choose from.</p>
-        </div>
-        <ComplexList/>
+        <CityHero selectedCity={selectedCity} />
+        <ApartmentList apartments={selectedApartments} />
       </>
     )
   }

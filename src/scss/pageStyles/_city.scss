@@ -1,16 +1,9 @@
 .divider {
-  padding: 100px 0 50px;
+  padding: 100px 16px 50px;
   background-color: rgb(251, 251, 251);
   display: grid;
   justify-items: center;
-
-  .line {
-    text-align: center;
-    width: 80px;
-    height: 2px;
-    background: $black;
-    margin-bottom: 10px;
-  }
+  text-align: center;
 
   h1, h2 {
     color: $black;
