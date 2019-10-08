@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Location from './Location'
+import Location from './LocationCard'
 import { LocationContext } from '../Context'
 
 export default class FeaturedRooms extends Component {

@@ -6,17 +6,17 @@ import { LocationContext } from '../Context'
 
 
 export default class City extends Component {
+  static contextType = LocationContext;
   constructor(props) {
     super(props);
     this.state = {
       slug: this.props.match.params.slug,
     }
   }
-  static contextType = LocationContext;
   render() {
-    const { getCity } = this.context;
+    const { getCity, getApartments } = this.context;
     const selectedCity = getCity(this.state.slug);
-    const selectedApartments = this.context.state.apartments;
+    const selectedApartments = getApartments(this.state.slug);
     if (!selectedCity) {
       return (
         <div className="error">

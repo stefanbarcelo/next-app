@@ -76,7 +76,7 @@ export default [
     country: "czech republic",
     flag: "🇨🇿",
     description:
-      "Travel to Prague, an enchanting city full of beautiful buildings and historical sites. Known as the city of a hundred spires, Prague is the perfect destination for those looking to travel to a European city rich with history and architectural wonders. Prague travel offers everything from romantic getaways to historical tours. You’ll find that it is impossible not to feel the charm of this Czech city. Built on nine hills alongside the Vltava River, Prague is a city of architectural wonder. From its many church spires to green gardens and parks, the Czech Republic’s capital city offers a variety of destinations to visit.",
+      "Known as the city of a hundred spires, Prague is the perfect destination for those looking to travel to a European city rich with history and architectural wonders. Prague travel offers everything from romantic getaways to historical tours. You’ll find that it is impossible not to feel the charm of this Czech city. Built on nine hills alongside the Vltava River, Prague is a city of architectural wonder. From its many church spires to green gardens and parks, the Czech Republic’s capital city offers a variety of destinations to visit.",
     price: 1242,
     degrees: "12˚C/54˚F",
     symbol: "⛅",

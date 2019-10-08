@@ -14,6 +14,7 @@ class LocationProvider extends Component {
   componentDidMount() {
     let cities = this.formatData(items);
     let apartments = this.formatData(allApartments);
+    console.log('working');
     this.setState({
       cities,
       apartments
@@ -29,18 +30,23 @@ class LocationProvider extends Component {
     return tempItems;
   }
   getCity = slug => {
-    // using a spread operator to grab this instances state but not affect it
     let tempCities = [...this.state.cities];
     const cities = tempCities.find(city => city.slug === slug);
     return cities;
   }
-
+  getApartments = slug => {
+    let tempApartments = [...this.state.apartments];
+    let newApartments = tempApartments.find(apartment => apartment.slug === slug);
+    newApartments = [...newApartments.apartments];
+    return newApartments;
+  }
   render() {
     return (
       <LocationContext.Provider
         value={{
           state: this.state,
-          getCity: this.getCity
+          getCity: this.getCity,
+          getApartments: this.getApartments,
         }}
       >
         {this.props.children}
