@@ -3,19 +3,20 @@ import ApartmentCard from "./ApartmentCard";
 import { Link } from "react-router-dom";
 
 export default function ApartmentList({ apartments }) {
+  apartments = apartments.map(item => {
+    return <ApartmentCard key={item.id} apartment={item} />
+  })
+  
   if (apartments.length === 0) {
     return (
       <div className="errText">
         <div className="line"></div>
-        <h1>This is awkward <span role="img" aria-label="awkwardEmoji">😅</span>
+        <h1>This is awkward <span role="img" aria-label="awkwardEmoji">😅 </span>
         It seems that there are <span>no rooms available</span> right now.</h1>
         <Link to="/" className="returnLink">Click me to return to the homepage.</Link>
       </div>
     )
   }
-  apartments = apartments.map(item => {
-    return <ApartmentCard key={item.id} apartment={item} />
-  })
   return (
     <>
       <div className="divider">

@@ -14,17 +14,15 @@ class LocationProvider extends Component {
   componentDidMount() {
     let cities = this.formatData(items);
     let apartments = this.formatData(allApartments);
-    console.log('working');
     this.setState({
       cities,
-      apartments
+      apartments,
     })
   }
   formatData(items) {
     let tempItems = items.map(item => {
-      let id = item.id;
-      let images = item.images;
-      let newItems = { ...item, images, id }
+      let id = item.slug;
+      let newItems = { ...item, id }
       return newItems;
     })
     return tempItems;
@@ -36,9 +34,8 @@ class LocationProvider extends Component {
   }
   getApartments = slug => {
     let tempApartments = [...this.state.apartments];
-    let newApartments = tempApartments.find(apartment => apartment.slug === slug);
-    newApartments = [...newApartments.apartments];
-    return newApartments;
+    let apartments = tempApartments.find(apartment => apartment.slug === slug);
+    return apartments;
   }
   render() {
     return (

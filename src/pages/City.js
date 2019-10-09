@@ -16,7 +16,7 @@ export default class City extends Component {
   render() {
     const { getCity, getApartments } = this.context;
     const selectedCity = getCity(this.state.slug);
-    const selectedApartments = getApartments(this.state.slug);
+    let selectedApartments = getApartments(this.state.slug);
     if (!selectedCity) {
       return (
         <div className="error">
@@ -25,7 +25,7 @@ export default class City extends Component {
         </div>
       )
     }
-
+    selectedApartments = [...selectedApartments.apartments];
     return (
       <>
         <CityHero selectedCity={selectedCity} />

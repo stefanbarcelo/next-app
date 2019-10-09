@@ -1,4 +1,4 @@
-import mhApartments from "../images/mhApartments.png";
+// import mhApartments from "../images/mhApartments.png";
 
 export default [
   // {
