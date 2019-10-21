@@ -5,12 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { LocationProvider } from './Context'
 
+
 ReactDOM.render(
   <LocationProvider>
     <Router>
       <App />
     </Router>
   </LocationProvider>,
+
   document.getElementById('root')
 );
 

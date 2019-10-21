@@ -5,7 +5,7 @@
 
   .apartmentListCenter {
     margin: 0 auto;
-    max-width: 1320px;
+    max-width: 1040px;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
     grid-gap: 16px;
@@ -19,10 +19,10 @@
       @include dropShadow;
 
       .aptImage {
-        height: 300px;
+        height: 250px;
 
         img {
-          height: 300px;
+          height: 250px;
           object-fit: cover;
           width: 100%;
         }

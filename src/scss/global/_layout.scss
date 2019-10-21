@@ -45,7 +45,8 @@
 .returnLink{
 
   &:hover {
-    border-bottom: 2px solid $black;
-    margin-bottom: 2px;
+    color: blue;
+    border-bottom: 1px solid blue;
+    margin-bottom: 4px;
   }
 }
