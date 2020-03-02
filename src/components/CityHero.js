@@ -8,11 +8,6 @@ export default function CityHero({ selectedCity }) {
   return (
     <div className="cityHero">
       <div className="cityImage">
-        <div className="marqueeText">
-          <h1>
-          {city}, {country} 
-          </h1>
-        </div>
         <img src={hero} alt="" />
       </div>
       <div className="cityInfoCon">

@@ -4,7 +4,11 @@
   min-height: 500px;
   height: 100vh;
   background: white;
+
   @include dropShadow;
+  @include respondTo(mobile) {
+    grid-template-columns: 1fr;
+  }
 
   .cityImage {
     position: relative;
@@ -13,27 +17,13 @@
     align-items: center;
     justify-items: center;
     width: 100%;
-
-    .marqueeText {
-      opacity: 0;
-      width: inherit;
-      position: absolute;
-      z-index: 10;
-      transition: all 1s ease-in-out;
-
-      h1 {
-        display:inline-block;
-        height: 100%;
-        font-family: titling-gothic-fb-extended, sans-serif;
-        box-sizing: border-box;
-        white-space: nowrap;
-        margin-top: 80px;
-        text-transform: capitalize;
-        font-size: 5vw;
-        animation: scroll-left 8s linear infinite;
-      }
-    }
+    margin-top: 60px;
     
+    @include respondTo(mobile) {
+      height: 260px;
+      grid-template-columns: 1fr;
+    }
+
     img {
       object-fit: cover;
       height: 100%;
@@ -42,53 +32,42 @@
       z-index: 3;
     }
 
-    &::after {
-      position: absolute;
-      background: $red;
-      content: "";
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 4;
-      opacity: 0;
-      transition: all 1s ease-in-out;
-    }
-
     &:hover {
-      .marqueeText {
-          opacity: 1;
-      }
-
       img {
         transform: scale(1.05)
-      }
-
-      &:after {
-        opacity: .8;
       }
     }
   }
 
   .cityInfoCon {
-    min-width: 480px;
     color: $black;
-    height: 100%;
-    padding: 40px 50px 0 50px;
+    margin-top: 60px;
+    padding: 0 50px;
     display: grid;
     align-items: center;
     justify-items: center;
 
+    @include respondTo(mobile) {
+      display: block;
+      height: auto;
+      padding: 20px 16px;
+      margin-top: 0;
+      @include dropShadow;
+    }
+
     .cityInfo {
       display: grid;
-      max-width: 550px;
+      max-width: 480px;
       margin-top: 30px;
+
+      @include respondTo(mobile) {
+        margin-top: 0px;
+      }
+
 
       h1, h2 {
         color: $black;
-        margin-bottom: 5px;
+        margin-bottom: 4px;
 
         span {
           text-transform: capitalize;
@@ -100,7 +79,7 @@
         position: relative;
         font-weight: 800;
         color: rgb(255, 64, 64);
-        margin-bottom: 5px;
+        margin-bottom: 4px;
         text-transform: capitalize;
 
         span {
@@ -114,7 +93,11 @@
       .cityDescription {
         color: $gray;
         margin-top: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 8px;
+
+        @include respondTo(mobile) {
+          margin-top: 0;
+        }
       }
 
       .coverArrowContainer {
@@ -131,7 +114,13 @@
           background: $black;
           height: 1px;
           width: 30px;
+          margin-left: -25px;
           transform: rotate(45deg);
+
+          @include respondTo(mobile) {
+            margin-left: -18px;
+            width: 20px;
+          }
   
           &:before {
             content: "";
@@ -140,8 +129,13 @@
             left: 15px;
             background: $black;
             height: 1px;
-            width: 30px;
+            width: inherit;
             transform: rotate(90deg);
+
+            @include respondTo(mobile) {
+            top: -10px;
+             left: 10px;
+            }
           }
         }
 

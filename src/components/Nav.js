@@ -50,7 +50,7 @@ export default class Navbar extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink 
+              <NavLink
                 className="mobLink"
                 to="/"
                 onClick={this.handleToggle}>
@@ -61,7 +61,16 @@ export default class Navbar extends Component {
                   </svg>
                 </span>
               </NavLink>
-              
+              <div className="dropDown">
+                <ul>
+                  <li>Taipei</li>
+                  <li>Barcelona</li>
+                  <li>Koh Samui</li>
+                  <li>Prague</li>
+                  <li>Rio De Janeiro</li>
+                  <li>Canggu</li>
+                </ul>
+              </div>
             </li>
             <li>
               <NavLink className="mobLink" to="/" onClick={this.handleToggle}>Contact Us</NavLink>

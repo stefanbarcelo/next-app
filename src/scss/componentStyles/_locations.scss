@@ -7,16 +7,19 @@
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  padding-left: 24px;
   background: rgba(21, 30, 46, 1);
   padding: 5vh 25px;
+
+  @include respondTo(mobile) {
+    padding: 24px 0 24px 16px;
+  }
 }
 
-.location {
+.locationCard {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 12px;
   background: url("../../images/taipei.jpg") center center no-repeat;
   background-size: cover;
   text-transform: capitalize;
@@ -29,40 +32,55 @@
   @include gradientOverlay;
   @include dropShadow;
 
+  @include respondTo(mobile) {
+    height: 180px;
+    width: 300px;
+  }
+
   img {
-    opacity: .5;
+    opacity: 0.5;
     box-sizing: border-box;
     position: absolute;
     object-fit: cover;
     height: 100%;
     width: 100%;
-    transition: all .25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   &:hover {
+    cursor: pointer;
     transform: scale(1.05);
 
     img {
-      opacity: .1;
+      opacity: 0.1;
     }
   }
 }
 
-.locationInfo {
+.locationCardInfo {
   position: relative;
   margin: 20px 30px 25px;
   height: 160px;
 
+  @include respondTo(mobile) {
+    margin: 10px 22px;
+  }
+
   p {
     position: relative;
     font-weight: 600;
+    font-size: 16px;
 
     .flagEmoji {
       position: absolute;
-      margin-top: 16px;
-      margin-left: 8px;
+      margin-top: 17px;
+      margin-left: 6px;
       font-size: 20px;
       line-height: 0;
+
+      @include respondTo(mobile) {
+        margin-top: 12px;
+      }
     }
   }
 

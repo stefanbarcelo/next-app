@@ -1,0 +1,24 @@
+// RESPONSIVE SIZES
+$laptop: 1280px;
+$ipad: 768px;
+$mobile: 414px;
+
+@mixin respondTo($media) {
+  @if $media == laptop {
+    @media only screen and (max-width: $laptop) {
+      @content;
+    }
+  }
+
+  @if $media == ipad {
+    @media only screen and (max-width: $ipadPro) {
+      @content;
+    }
+  }
+
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+}

@@ -5,15 +5,19 @@
 
   .apartmentListCenter {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1440px;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
     grid-gap: 16px;
     padding: 0 24px;
 
+    @include respondTo(mobile) {
+      padding: 0 16px;
+    }
+
     .apt {
       width: 100%;
-      border-radius: 5px;
+      border-radius: 12px;
       overflow: hidden;
       transition: all .3s ease-in-out;
       @include dropShadow;
@@ -29,12 +33,16 @@
       }
 
       .aptInfo {
-        padding: 20px 25px;
+        padding: 20px 24px;
+
+        @include respondTo(mobile) {
+          padding: 20px 16px;
+        }
 
         .perksAndRating {
           .aptPerk {
             display: inline-block;
-            border-radius: 5px;
+            border-radius: 4px;
             margin-right: 10px;
             color: white;
             background: $black;
@@ -62,7 +70,11 @@
         }
 
         h3 {
-          margin-top: 10px;
+          margin-top: 8px;
+
+          @include respondTo(mobile) {
+            margin-bottom: 4px;
+          }
 
           span {
             font-weight: 800;
@@ -76,11 +88,12 @@
         }
 
         .aptPrice {
-          margin-top: 10px;
+          margin-top: 8px;
           display: grid;
           grid-template-columns: 138px auto;
           color: $black;
           font-weight: 600;
+          font-size: 16px;
           color: rgb(192, 192, 192);
           transition: all .5s ease-in-out;
 

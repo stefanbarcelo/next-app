@@ -1,11 +1,17 @@
 .cityAverages {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+
+  @include respondTo(mobile) {
+    display: none;
+    margin-bottom: 20px;
+  }
 }
 
 .cityAvg {
   display: inline-block;
-  margin-right: 25px;
+  margin-top: 16px;
+  margin-right: 24px;
 
   .metricInside {
     display: grid;

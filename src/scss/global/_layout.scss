@@ -31,6 +31,7 @@
     max-width: 640px;
     color: $black;
     margin-bottom: 10px;
+    padding: 0 16px;
 
     span {
       font-weight: 800;
@@ -43,10 +44,9 @@
 }
 
 .returnLink{
-
   &:hover {
-    color: blue;
-    border-bottom: 1px solid blue;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
     margin-bottom: 4px;
   }
 }

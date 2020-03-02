@@ -3,7 +3,7 @@ $smoke: #f5f6f7;
 $black: #080808;
 $gray: rgb(166, 166, 166);
 $red: rgb(255, 99, 99);
-$green: #16B722;
+$green: #16b722;
 
 @mixin gradientOverlay {
   background: rgba(21, 30, 46, 0.45);
@@ -23,15 +23,15 @@ $green: #16B722;
 }
 
 @mixin dropShadow {
-  -webkit-box-shadow: 0px 14px 16px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 14px 16px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 14px 16px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.1);
 }
 
 @mixin hoverShadow {
-  -webkit-box-shadow: 0px 14px 16px 0px rgba(50, 176, 43, 0.25);
-  -webkit-box-shadow: 0px 14px 16px 0px rgba(50, 176, 43, 0.25);
-  -webkit-box-shadow: 0px 14px 16px 0px rgba(50, 176, 43, 0.25);
+  -webkit-box-shadow: 0px 10px 16px 0px rgba(50, 176, 43, 0.25);
+  -webkit-box-shadow: 0px 10px 16px 0px rgba(50, 176, 43, 0.25);
+  -webkit-box-shadow: 0px 10px 16px 0px rgba(50, 176, 43, 0.25);
 }
 
 @mixin underlineLinks {
@@ -58,7 +58,14 @@ $green: #16B722;
     position: absolute;
     margin-left: 5px;
     transform: rotate(-180deg);
-    transition: all .25s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    svg {
+      transition: all 0.25s ease-in-out;
+
+      path {
+        transition: all 0.25s ease-in-out;
+      }
+    }
   }
 
   &:hover {
@@ -69,11 +76,11 @@ $green: #16B722;
     }
 
     .arrow {
-      transition: all .25s ease-in-out;
+      transform: rotate(0deg);
       // transform: rotate(0deg);
-      svg{
+      svg {
         path {
-          transition: all .25s ease-in-out;
+          transition: all 0.25s ease-in-out;
           stroke: $red;
         }
       }

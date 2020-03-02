@@ -16,7 +16,10 @@
       display: grid;
       align-items: center;
       grid-template-columns: 80px auto 80px;
-      padding: 0 30px;
+      padding: 0 24px;
+      @include respondTo(mobile) {
+        padding: 0 16px;
+      }
 
       .logoCon {
         display: grid;
@@ -25,7 +28,7 @@
       }
 
       .contact {
-        font-size: 13px;
+        font-size: 12px;
         text-align: right;
         font-weight: 200;
       }
@@ -35,9 +38,9 @@
   .mobileMenu {
     position: fixed;
     height: 100vh;
-    min-width: 200px;
+    min-width: 240px;
     width: 30vh;
-    padding: 24px;
+    padding: 16px;
     background: rgb(248, 248, 248);
     z-index: 40;
     transform: translateX(-105%);
@@ -52,7 +55,7 @@
       .mobLink {
         font-size: 24px;
         font-weight: 600;
-        margin-bottom: 30px;
+        margin: 12px 0;
         @include underlineLinks;
       }
 
@@ -62,6 +65,17 @@
 
         &:before {
           opacity: .3;
+        }
+      }
+
+      .dropDown {
+        margin-left: 12px;
+
+        ul {
+          li {
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
         }
       }
     }
@@ -94,7 +108,7 @@
   .burger::after {
     display: block;
     position: relative;
-    width: 30px;
+    width: 28px;
     height: 1px;
     background: rgb(0, 0, 0);
     transition: all 0.25s ease;

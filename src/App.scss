@@ -13,8 +13,9 @@
 
 // GLOBAL STYLINGS
 @import "./scss/global/variables";
-@import "./scss/global/globalReset";
 @import "./scss/global/layout";
+@import "./scss/global/responsiveSizes";
+@import "./scss/global/globalReset";
 
 // COMPONENTS
 @import "./scss/componentStyles/logos";
